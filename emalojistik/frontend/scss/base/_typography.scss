@@ -1,0 +1,207 @@
+// Typography
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-primary;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+    color: $text-dark;
+}
+
+h1 {
+    font-size: $font-size-xxl;
+    @media (max-width: $breakpoint-md) {
+        font-size: $font-size-xl;
+    }
+}
+
+h2 {
+    font-size: $font-size-xl;
+    @media (max-width: $breakpoint-md) {
+        font-size: $font-size-lg;
+    }
+}
+
+h3 {
+    font-size: $font-size-lg;
+    @media (max-width: $breakpoint-md) {
+        font-size: $font-size-base;
+    }
+}
+
+h4 {
+    font-size: $font-size-base;
+}
+
+h5 {
+    font-size: $font-size-sm;
+}
+
+h6 {
+    font-size: $font-size-xs;
+}
+
+p {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-base;
+    line-height: 1.6;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
+
+// Text Styles
+.text-primary {
+    color: $primary-color;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+.text-success {
+    color: $success-color;
+}
+
+.text-danger {
+    color: $danger-color;
+}
+
+.text-warning {
+    color: $warning-color;
+}
+
+.text-info {
+    color: $info-color;
+}
+
+.text-light {
+    color: $text-light;
+}
+
+.text-dark {
+    color: $text-dark;
+}
+
+// Text Alignment
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Text Transform
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Font Weights
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-weight-normal {
+    font-weight: 400;
+}
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+// Font Styles
+.font-italic {
+    font-style: italic;
+}
+
+// Line Heights
+.line-height-1 {
+    line-height: 1;
+}
+
+.line-height-sm {
+    line-height: 1.25;
+}
+
+.line-height-base {
+    line-height: 1.5;
+}
+
+.line-height-lg {
+    line-height: 2;
+}
+
+// Text Decoration
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+// Text Overflow
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Word Break
+.text-break {
+    word-break: break-word;
+}
+
+// Text Wrap
+.text-nowrap {
+    white-space: nowrap;
+}
+
+// Text Shadow
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Letter Spacing
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 3px;
+} 

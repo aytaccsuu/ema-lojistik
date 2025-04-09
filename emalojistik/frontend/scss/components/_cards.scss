@@ -1,0 +1,204 @@
+// Cards
+.card {
+    background-color: #fff;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    transition: $transition-base;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-4px);
+    }
+}
+
+// Card Header
+.card-header {
+    padding: $spacing-md;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+// Card Body
+.card-body {
+    padding: $spacing-md;
+}
+
+// Card Footer
+.card-footer {
+    padding: $spacing-md;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+// Card Image
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-img-top {
+    border-top-left-radius: $border-radius-md;
+    border-top-right-radius: $border-radius-md;
+}
+
+.card-img-bottom {
+    border-bottom-left-radius: $border-radius-md;
+    border-bottom-right-radius: $border-radius-md;
+}
+
+// Card Title
+.card-title {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-lg;
+    font-weight: 600;
+}
+
+// Card Subtitle
+.card-subtitle {
+    margin-top: -$spacing-sm;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-base;
+    color: $text-secondary;
+}
+
+// Card Text
+.card-text {
+    margin-bottom: $spacing-md;
+    color: $text-secondary;
+}
+
+// Card Links
+.card-link {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
+
+// Card Variants
+.card-primary {
+    border-top: 4px solid $primary-color;
+}
+
+.card-secondary {
+    border-top: 4px solid $secondary-color;
+}
+
+.card-success {
+    border-top: 4px solid $success-color;
+}
+
+.card-danger {
+    border-top: 4px solid $danger-color;
+}
+
+.card-warning {
+    border-top: 4px solid $warning-color;
+}
+
+.card-info {
+    border-top: 4px solid $info-color;
+}
+
+// Card Groups
+.card-group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include respond-to(md) {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1;
+    }
+}
+
+// Card Grid
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+
+    @include respond-to(sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Card Hover Effects
+.card-hover {
+    &:hover {
+        .card-img {
+            transform: scale(1.05);
+        }
+    }
+
+    .card-img {
+        transition: transform 0.3s ease;
+    }
+}
+
+// Card Overlay
+.card-overlay {
+    position: relative;
+
+    .card-img {
+        height: 200px;
+    }
+
+    .card-overlay-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: $spacing-md;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: #fff;
+    }
+}
+
+// Card Badge
+.card-badge {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    padding: $spacing-xs $spacing-sm;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-sm;
+    font-weight: 500;
+}
+
+// Card Stats
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-md;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    .stat-item {
+        text-align: center;
+
+        .stat-value {
+            font-size: $font-size-lg;
+            font-weight: 600;
+            color: $primary-color;
+        }
+
+        .stat-label {
+            font-size: $font-size-sm;
+            color: $text-secondary;
+        }
+    }
+} 

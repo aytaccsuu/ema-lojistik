@@ -1,0 +1,181 @@
+// Media Query Mixins
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+        @media (max-width: $breakpoint-sm - 1) { @content; }
+    }
+    @else if $breakpoint == sm {
+        @media (min-width: $breakpoint-sm) { @content; }
+    }
+    @else if $breakpoint == md {
+        @media (min-width: $breakpoint-md) { @content; }
+    }
+    @else if $breakpoint == lg {
+        @media (min-width: $breakpoint-lg) { @content; }
+    }
+    @else if $breakpoint == xl {
+        @media (min-width: $breakpoint-xl) { @content; }
+    }
+    @else if $breakpoint == xxl {
+        @media (min-width: $breakpoint-xxl) { @content; }
+    }
+}
+
+// Flexbox Mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Grid Mixins
+@mixin grid($columns: 1, $gap: $spacing-md) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+// Position Mixins
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    @if $top { top: $top; }
+    @if $right { right: $right; }
+    @if $bottom { bottom: $bottom; }
+    @if $left { left: $left; }
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Size Mixins
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin square($size) {
+    @include size($size);
+}
+
+// Text Mixins
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin text-gradient($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+// Animation Mixins
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($name, $duration: 1s, $timing-function: ease, $delay: 0s, $iteration-count: 1, $direction: normal, $fill-mode: forwards) {
+    animation: $name $duration $timing-function $delay $iteration-count $direction $fill-mode;
+}
+
+// Transition Mixins
+@mixin transition($properties...) {
+    $transitions: ();
+    @each $property in $properties {
+        $transitions: append($transitions, $property $transition-base, comma);
+    }
+    transition: $transitions;
+}
+
+// Box Shadow Mixins
+@mixin box-shadow($level: 1) {
+    @if $level == 1 {
+        box-shadow: $shadow-sm;
+    } @else if $level == 2 {
+        box-shadow: $shadow-md;
+    } @else if $level == 3 {
+        box-shadow: $shadow-lg;
+    } @else if $level == 4 {
+        box-shadow: $shadow-xl;
+    }
+}
+
+// Border Radius Mixins
+@mixin border-radius($radius: $border-radius-md) {
+    border-radius: $radius;
+}
+
+@mixin border-radius-top($radius: $border-radius-md) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius: $border-radius-md) {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+// Background Mixins
+@mixin background-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin background-gradient($start-color, $end-color, $direction: to right) {
+    background: linear-gradient($direction, $start-color, $end-color);
+}
+
+// Button Mixins
+@mixin button($background-color, $text-color, $hover-background: darken($background-color, 10%)) {
+    background-color: $background-color;
+    color: $text-color;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+        background-color: $hover-background;
+    }
+}
+
+// Container Mixins
+@mixin container($max-width: $container-lg) {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+}
+
+// Clearfix Mixin
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+} 

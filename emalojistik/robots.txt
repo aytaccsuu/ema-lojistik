@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://emalojistik.com/sitemap.xml
+
+# Disallow admin areas
+User-agent: *
+Disallow: /admin/
+Disallow: /backend/

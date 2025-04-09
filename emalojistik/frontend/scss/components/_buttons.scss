@@ -1,0 +1,157 @@
+// Buttons
+.btn {
+    display: inline-block;
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-base;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border-radius: $border-radius-sm;
+    transition: $transition-base;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Button Variants
+.btn-primary {
+    @include button($primary-color, $text-light);
+}
+
+.btn-secondary {
+    @include button($secondary-color, $text-light);
+}
+
+.btn-success {
+    @include button($success-color, $text-light);
+}
+
+.btn-danger {
+    @include button($danger-color, $text-light);
+}
+
+.btn-warning {
+    @include button($warning-color, $text-dark);
+}
+
+.btn-info {
+    @include button($info-color, $text-light);
+}
+
+.btn-light {
+    @include button($light-color, $text-dark);
+}
+
+.btn-dark {
+    @include button($dark-color, $text-light);
+}
+
+// Button Outlines
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        color: $text-light;
+    }
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    border-color: $secondary-color;
+    color: $secondary-color;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $text-light;
+    }
+}
+
+// Button Sizes
+.btn-sm {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+}
+
+.btn-lg {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-lg;
+}
+
+// Button Block
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Button with Icon
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+
+    i {
+        font-size: 1.2em;
+    }
+}
+
+// Button Groups
+.btn-group {
+    display: inline-flex;
+    gap: $spacing-xs;
+
+    .btn {
+        border-radius: 0;
+
+        &:first-child {
+            border-top-left-radius: $border-radius-sm;
+            border-bottom-left-radius: $border-radius-sm;
+        }
+
+        &:last-child {
+            border-top-right-radius: $border-radius-sm;
+            border-bottom-right-radius: $border-radius-sm;
+        }
+    }
+}
+
+// Button States
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+// Button Loading State
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        border: 2px solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: button-loading 0.75s linear infinite;
+    }
+}
+
+@keyframes button-loading {
+    to {
+        transform: rotate(360deg);
+    }
+} 

@@ -1,0 +1,268 @@
+// Badges
+.badge {
+    display: inline-block;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: $border-radius-sm;
+    transition: $transition-base;
+}
+
+// Badge Variants
+.badge-primary {
+    color: #fff;
+    background-color: $primary-color;
+}
+
+.badge-secondary {
+    color: #fff;
+    background-color: $secondary-color;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: $success-color;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: $danger-color;
+}
+
+.badge-warning {
+    color: #fff;
+    background-color: $warning-color;
+}
+
+.badge-info {
+    color: #fff;
+    background-color: $info-color;
+}
+
+.badge-light {
+    color: $text-primary;
+    background-color: $light-color;
+}
+
+.badge-dark {
+    color: #fff;
+    background-color: $dark-color;
+}
+
+// Badge Pill
+.badge-pill {
+    padding-right: $spacing-sm;
+    padding-left: $spacing-sm;
+    border-radius: $border-radius-lg;
+}
+
+// Badge Outline
+.badge-outline {
+    background-color: transparent;
+    border: 1px solid currentColor;
+}
+
+.badge-outline-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+}
+
+.badge-outline-secondary {
+    color: $secondary-color;
+    border-color: $secondary-color;
+}
+
+.badge-outline-success {
+    color: $success-color;
+    border-color: $success-color;
+}
+
+.badge-outline-danger {
+    color: $danger-color;
+    border-color: $danger-color;
+}
+
+.badge-outline-warning {
+    color: $warning-color;
+    border-color: $warning-color;
+}
+
+.badge-outline-info {
+    color: $info-color;
+    border-color: $info-color;
+}
+
+.badge-outline-light {
+    color: $light-color;
+    border-color: $light-color;
+}
+
+.badge-outline-dark {
+    color: $dark-color;
+    border-color: $dark-color;
+}
+
+// Badge Sizes
+.badge-sm {
+    padding: $spacing-xs * 0.5 $spacing-xs;
+    font-size: $font-size-xs;
+}
+
+.badge-lg {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-base;
+}
+
+// Badge Link
+.badge-link {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// Badge Icon
+.badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    font-size: $font-size-sm;
+    border-radius: 50%;
+}
+
+// Badge Counter
+.badge-counter {
+    position: relative;
+    padding-left: $spacing-md;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: $spacing-xs;
+        width: 4px;
+        height: 4px;
+        background-color: currentColor;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// Badge Dot
+.badge-dot {
+    position: relative;
+    padding-left: $spacing-md;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: $spacing-xs;
+        width: 6px;
+        height: 6px;
+        background-color: currentColor;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// Badge Status
+.badge-status {
+    position: relative;
+    padding-left: $spacing-md;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: $spacing-xs;
+        width: 8px;
+        height: 8px;
+        background-color: currentColor;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.badge-status-success::before {
+        background-color: $success-color;
+    }
+
+    &.badge-status-warning::before {
+        background-color: $warning-color;
+    }
+
+    &.badge-status-danger::before {
+        background-color: $danger-color;
+    }
+}
+
+// Badge Notification
+.badge-notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 $spacing-xs;
+    font-size: $font-size-xs;
+    line-height: 1.25rem;
+    text-align: center;
+    border-radius: $border-radius-lg;
+    background-color: $danger-color;
+    color: #fff;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+// Badge Avatar
+.badge-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+// Badge Group
+.badge-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+// Badge Animated
+.badge-animated {
+    animation: pulse 2s infinite;
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+// Badge Floating
+.badge-floating {
+    position: absolute;
+    top: -$spacing-xs;
+    right: -$spacing-xs;
+    transform: translate(50%, -50%);
+    z-index: 1;
+} 

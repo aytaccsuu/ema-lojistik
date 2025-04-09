@@ -1,0 +1,192 @@
+// Reset CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-base;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    line-height: 1.5;
+    color: $text-primary;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+// Remove list styles
+ul, ol {
+    list-style: none;
+}
+
+// Remove default link styles
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: $transition-base;
+}
+
+// Remove default button styles
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+}
+
+// Remove default input styles
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+// Remove default table styles
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+// Remove default image styles
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Remove default fieldset styles
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Remove default legend styles
+legend {
+    padding: 0;
+}
+
+// Remove default hr styles
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: $spacing-md 0;
+}
+
+// Remove default blockquote styles
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+// Remove default pre styles
+pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+// Remove default code styles
+code {
+    font-family: monospace;
+}
+
+// Remove default iframe styles
+iframe {
+    border: none;
+}
+
+// Remove default details styles
+details {
+    display: block;
+}
+
+// Remove default summary styles
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+// Remove default dialog styles
+dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    border: none;
+    background: #fff;
+}
+
+// Remove default meter styles
+meter {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default progress styles
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default select styles
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default textarea styles
+textarea {
+    resize: vertical;
+}
+
+// Remove default input[type="search"] styles
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default input[type="number"] styles
+input[type="number"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default input[type="range"] styles
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default input[type="color"] styles
+input[type="color"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default input[type="file"] styles
+input[type="file"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default input[type="radio"] styles
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+// Remove default input[type="checkbox"] styles
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+} 

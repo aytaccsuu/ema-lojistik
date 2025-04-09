@@ -1,0 +1,235 @@
+// Alerts
+.alert {
+    position: relative;
+    padding: $spacing-md;
+    margin-bottom: $spacing-md;
+    border: 1px solid transparent;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-base;
+    line-height: 1.5;
+}
+
+// Alert Variants
+.alert-primary {
+    color: darken($primary-color, 20%);
+    background-color: rgba($primary-color, 0.1);
+    border-color: rgba($primary-color, 0.2);
+}
+
+.alert-secondary {
+    color: darken($secondary-color, 20%);
+    background-color: rgba($secondary-color, 0.1);
+    border-color: rgba($secondary-color, 0.2);
+}
+
+.alert-success {
+    color: darken($success-color, 20%);
+    background-color: rgba($success-color, 0.1);
+    border-color: rgba($success-color, 0.2);
+}
+
+.alert-danger {
+    color: darken($danger-color, 20%);
+    background-color: rgba($danger-color, 0.1);
+    border-color: rgba($danger-color, 0.2);
+}
+
+.alert-warning {
+    color: darken($warning-color, 20%);
+    background-color: rgba($warning-color, 0.1);
+    border-color: rgba($warning-color, 0.2);
+}
+
+.alert-info {
+    color: darken($info-color, 20%);
+    background-color: rgba($info-color, 0.1);
+    border-color: rgba($info-color, 0.2);
+}
+
+.alert-light {
+    color: darken($light-color, 20%);
+    background-color: rgba($light-color, 0.1);
+    border-color: rgba($light-color, 0.2);
+}
+
+.alert-dark {
+    color: darken($dark-color, 20%);
+    background-color: rgba($dark-color, 0.1);
+    border-color: rgba($dark-color, 0.2);
+}
+
+// Alert Dismissible
+.alert-dismissible {
+    padding-right: $spacing-lg;
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: $spacing-md;
+        color: inherit;
+        background: transparent;
+        border: 0;
+        font-size: $font-size-lg;
+        font-weight: 700;
+        line-height: 1;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: $transition-base;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+
+// Alert Link
+.alert-link {
+    font-weight: 700;
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Alert Heading
+.alert-heading {
+    color: inherit;
+    margin-top: 0;
+    margin-bottom: $spacing-xs;
+    font-size: $font-size-lg;
+    font-weight: 500;
+}
+
+// Alert Icon
+.alert-icon {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        margin-right: $spacing-sm;
+        font-size: $font-size-lg;
+    }
+}
+
+// Alert Actions
+.alert-actions {
+    display: flex;
+    align-items: center;
+    margin-top: $spacing-sm;
+
+    .btn {
+        margin-right: $spacing-sm;
+    }
+}
+
+// Alert Floating
+.alert-floating {
+    position: fixed;
+    top: $spacing-md;
+    right: $spacing-md;
+    z-index: 1050;
+    max-width: 350px;
+    box-shadow: $shadow-lg;
+    animation: slideIn 0.3s ease-out;
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+// Alert Stack
+.alert-stack {
+    position: fixed;
+    top: $spacing-md;
+    right: $spacing-md;
+    z-index: 1050;
+    max-width: 350px;
+
+    .alert {
+        margin-bottom: $spacing-sm;
+        animation: slideIn 0.3s ease-out;
+    }
+}
+
+// Alert Progress
+.alert-progress {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        background-color: currentColor;
+        animation: progress 3s linear forwards;
+    }
+
+    @keyframes progress {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 0;
+        }
+    }
+}
+
+// Alert Border
+.alert-border-left {
+    border-left-width: 4px;
+}
+
+.alert-border-right {
+    border-right-width: 4px;
+}
+
+.alert-border-top {
+    border-top-width: 4px;
+}
+
+.alert-border-bottom {
+    border-bottom-width: 4px;
+}
+
+// Alert Outline
+.alert-outline {
+    background-color: transparent;
+}
+
+// Alert Rounded
+.alert-rounded {
+    border-radius: $border-radius-lg;
+}
+
+// Alert Shadow
+.alert-shadow {
+    box-shadow: $shadow-sm;
+}
+
+// Alert Animated
+.alert-animated {
+    animation: fadeIn 0.3s ease-out;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+} 

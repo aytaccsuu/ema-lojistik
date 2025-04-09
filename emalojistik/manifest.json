@@ -1,0 +1,21 @@
+{
+  "name": "EMA Lojistik",
+  "short_name": "EMA",
+  "description": "EMA Lojistik - Uluslararası Taşımacılık Hizmetleri",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e63946",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "frontend/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
